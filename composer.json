@@ -1,0 +1,40 @@
+{
+    "name": "onedesign/autopop",
+    "description": "Helps automatically populate entry content.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "autopop"
+    ],
+    "support": {
+        "docs": "https://github.com/onedesign/autopop/blob/master/README.md",
+        "issues": "https://github.com/onedesign/autopop/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "One Design Company",
+            "homepage": "https://onedesigncompany.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "onedesign\\autopop\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Autopop",
+        "handle": "autopop",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/onedesign/autopop/master/CHANGELOG.md",
+        "class": "onedesign\\autopop\\Autopop"
+    }
+}
