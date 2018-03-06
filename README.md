@@ -43,10 +43,11 @@ To install the plugin, follow these instructions.
   excludeIds: [5, 13]
 }) %}
 
-{# If you have an Entries field that may not have all of it's entries set, you can also easily "fill" all of the slots in that field #}
+{# If you have an Entries field that may not have all of it's entries set, you can also easily "fill" all of the slots in that field. NOTE: You can't currently pass entries populated using autopop.fillField() through another autopop.entries(), because autopop.fillField() returns an Element Query with specific entry ids. Either make autopop.fillField() the last thing you pass entries through, or use in place of autopop.entries() #}
 {% set filledEntries = craft.autopop.fillField({
   entries: populatedEntries,
-  field: entry.featuredEntries
+  field: entry.featuredEntries,
+  excludeIds: []
 }) %}
 ```
 
